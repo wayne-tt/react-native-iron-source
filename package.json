@@ -4,7 +4,10 @@
   "description": "React Native package to interface the ironSource SDK.  https://ironsrc.com",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postinstall": "./scripts/linkSKAdNetwork.sh SU67R6K2V3 ../../.."
+  },
+  "bin": {
+    "rnis-linker": "./scripts/linkSKAdNetwork.sh"
   },
   "keywords": [
     "react-native",
@@ -24,5 +27,8 @@
   "license": "MIT",
   "peerDependencies": {
     "react-native": ">= 0.40.0"
+  },
+  "devDependencies": {
+    "json": "^10.0.0"
   }
 }
